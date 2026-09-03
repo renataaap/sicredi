@@ -1,8 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Quicksand:wght@500;600;700&display=swap');
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+:root {
+  --green: #2e7d32;
+  --green-dark: #1b5e20;
+  --green-light: #e8f5e9;
+  --orange: #f59e0b;
+  --cream: #fffaf0;
+  --dark: #1f2937;
+  --gray: #6b7280;
+  --white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -14,6 +30,7 @@ body {
     radial-gradient(circle at 90% 85%, rgba(153,14,9,0.06) 0%, transparent 40%),
     #f7dbad;
   color: #810804;
+  color: var(--dark);
 }
 
 .container {
@@ -211,4 +228,48 @@ input:focus, select:focus {
   padding: 10px;
   position: relative;
   z-index: 1;
+}
+
+.topbar {
+  height: 70px;
+  padding: 0 40px;
+
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #111;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #111;
+  color: white;
+  cursor: pointer;
+}
+
+.icones{
+  display: flex;
+  justify-content: center;
 }

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Formulário de Cadastro</h1>
+
+  <div class="tabs">
+    <button type="button" class="tab-btn active" data-tab="pf">Pessoa Física</button>
+    <button type="button" class="tab-btn" data-tab="pj">Pessoa Jurídica</button>
+  </div>
+
+  <form id="cadastroForm">
+
+    <!-- ========== PESSOA FÍSICA ========== -->
+    <div class="form-section active" id="pf">
+
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+
+        <div class="form-group">
+          <label for="pf_nome">Nome completo</label>
+          <input type="text" id="pf_nome" name="pf_nome">
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="pf_cpf">CPF</label>
+            <input type="text" id="pf_cpf" name="pf_cpf" placeholder="000.000.000-00">
+          </div>
+          <div class="form-group">
+            <label for="pf_nasc">Data de nascimento</label>
+            <input type="date" id="pf_nasc" name="pf_nasc">
+          </div>
+        </div>
+
+      
+
+        <div class="row">
+          <div class="form-group">
+            <label for="pf_telefone">Telefone</label>
+            <input type="tel" id="pf_telefone" name="pf_telefone" placeholder="(00) 00000-0000">
+          </div>
+          <div class="form-group">
+            <label for="pf_email">E-mail</label>
+            <input type="email" id="pf_email" name="pf_email">
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Acesso ao Sistema (se aplicável)</legend>
+        <div class="form-group">
+          <label for="pf_senha">Senha</label>
+          <input type="password" id="pf_senha" name="pf_senha">
+        </div>
+      </fieldset>
+      
+      <fieldset>
+        <legend>Endereço</legend>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="pf_cep">CEP</label>
+            <input type="text" id="pf_cep" name="pf_cep" placeholder="00000-000">
+          </div>
+          <div class="form-group">
+            <label for="pf_rua">Rua</label>
+            <input type="text" id="pf_rua" name="pf_rua">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="pf_numero">Número</label>
+            <input type="text" id="pf_numero" name="pf_numero">
+          </div>
+          <div class="form-group">
+            <label for="pf_complemento">Complemento</label>
+            <input type="text" id="pf_complemento" name="pf_complemento">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="pf_bairro">Bairro</label>
+            <input type="text" id="pf_bairro" name="pf_bairro">
+          </div>
+          <div class="form-group">
+            <label for="pf_cidade">Cidade</label>
+            <input type="text" id="pf_cidade" name="pf_cidade">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="pf_estado">Estado</label>
+          <select id="pf_estado" name="pf_estado">
+            <option value="">Selecione</option>
+            <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+            <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+            <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+            <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+            <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+            <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+            <option>SP</option><option>SE</option><option>TO</option>
+          </select>
+        </div>
+      </fieldset>
+
+
+    </div>
+
+    <!-- ========== PESSOA JURÍDICA ========== -->
+    <div class="form-section" id="pj">
+
+      <fieldset>
+        <legend>Dados da Empresa</legend>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="pj_razao">Razão social</label>
+            <input type="text" id="pj_razao" name="pj_razao">
+          </div>
+          <div class="form-group">
+            <label for="pj_fantasia">Nome fantasia</label>
+            <input type="text" id="pj_fantasia" name="pj_fantasia">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="pj_cnpj">CNPJ</label>
+            <input type="text" id="pj_cnpj" name="pj_cnpj" placeholder="00.000.000/0000-00">
+          </div>
+          <div class="form-group">
+            <label for="pj_ie">Inscrição Estadual/Municipal (quando aplicável)</label>
+            <input type="text" id="pj_ie" name="pj_ie">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="pj_abertura">Data de abertura</label>
+            <input type="date" id="pj_abertura" name="pj_abertura">
+          </div>
+          <div class="form-group">
+            <label for="pj_tipo">Tipo jurídico</label>
+            <select id="pj_tipo" name="pj_tipo">
+              <option value="">Selecione</option>
+              <option>MEI</option>
+              <option>LTDA</option>
+              <option>EIRELI</option>
+              <option>S/A</option>
+              <option>Outro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="pj_cnae">Atividade econômica (CNAE)</label>
+          <input type="text" id="pj_cnae" name="pj_cnae">
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="pj_telefone">Telefone</label>
+            <input type="tel" id="pj_telefone" name="pj_telefone" placeholder="(00) 00000-0000">
+          </div>
+          <div class="form-group">
+            <label for="pj_email">E-mail</label>
+            <input type="email" id="pj_email" name="pj_email">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço da Empresa</legend>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="pj_cep">CEP</label>
+            <input type="text" id="pj_cep" name="pj_cep" placeholder="00000-000">
+          </div>
+          <div class="form-group">
+            <label for="pj_rua">Rua</label>
+            <input type="text" id="pj_rua" name="pj_rua">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="pj_numero">Número</label>
+            <input type="text" id="pj_numero" name="pj_numero">
+          </div>
+          <div class="form-group">
+            <label for="pj_complemento">Complemento</label>
+            <input type="text" id="pj_complemento" name="pj_complemento">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="pj_bairro">Bairro</label>
+            <input type="text" id="pj_bairro" name="pj_bairro">
+          </div>
+          <div class="form-group">
+            <label for="pj_cidade">Cidade</label>
+            <input type="text" id="pj_cidade" name="pj_cidade">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="pj_estado">Estado</label>
+          <select id="pj_estado" name="pj_estado">
+            <option value="">Selecione</option>
+            <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+            <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+            <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+            <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+            <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+            <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+            <option>SP</option><option>SE</option><option>TO</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Dados do Responsável Legal</legend>
+
+        <div class="form-group">
+          <label for="pj_resp_nome">Nome</label>
+          <input type="text" id="pj_resp_nome" name="pj_resp_nome">
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="pj_resp_cpf">CPF</label>
+            <input type="text" id="pj_resp_cpf" name="pj_resp_cpf" placeholder="000.000.000-00">
+          </div>
+          <div class="form-group">
+            <label for="pj_resp_cargo">Cargo/função</label>
+            <input type="text" id="pj_resp_cargo" name="pj_resp_cargo">
+          </div>
+        </div>
+      </fieldset>
+
+    </div>
+
+    <button type="submit" class="submit-btn">Cadastrar</button>
+    <div id="msg">Cadastro enviado com sucesso!</div>
+  </form>
+</div>
+
+<script>
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const sections = document.querySelectorAll('.form-section');
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabButtons.forEach(b => b.classList.remove('active'));
+      sections.forEach(s => s.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  document.getElementById('cadastroForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const msg = document.getElementById('msg');
+    msg.style.display = 'block';
+    setTimeout(() => { msg.style.display = 'none'; }, 3000);
+    // Aqui você pode integrar com um backend (fetch/AJAX) para salvar os dados.
+  });
+</script>
+
+</body>
+</html>
