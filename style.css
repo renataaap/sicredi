@@ -273,3 +273,52 @@ button {
   display: flex;
   justify-content: center;
 }
+
+.card {
+  width: 390px;
+  height: 545px;
+
+  background-image: url("imagem.jpg");
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 15px;
+  overflow: hidden;
+
+  position: relative;
+}
+
+/* Camada escura sobre a imagem */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Conteúdo por cima da imagem */
+.conteudo {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  z-index: 1;
+}
+
+h2 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+a {
+  display: inline-block;
+  padding: 12px 35px;
+
+  color: white;
+  text-decoration: none;
+
+  border: 1px solid white;
+  border-radius: 20px;
+
+  font-weight: bold;
+}
